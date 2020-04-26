@@ -39,12 +39,16 @@ export default {
         url: '/'
       },
       {
-        label: 'Table',
-        url: '/table'
+        label: 'Hard Coded Vuex',
+        url: '/desserts-table'
       },
       {
-        label: 'Todos Table',
+        label: 'Axios Vuex',
         url: '/todos-table'
+      },
+      {
+        label: 'Form',
+        url: '/todos-form'
       }
     ]
   }),

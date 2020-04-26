@@ -34,6 +34,9 @@ export default {
             ]
         )
     },
+    created(){
+        this.fetchTodos();
+    }
 }
 </script>
 

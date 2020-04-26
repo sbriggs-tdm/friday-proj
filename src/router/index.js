@@ -11,14 +11,19 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/table',
-    name: 'Table',
-    component: () => import('@/views/Table.vue')
+    path: '/desserts-table',
+    name: 'DessertsTable',
+    component: () => import('@/views/DessertsTable.vue')
   },
   {
     path: '/todos-table',
     name: 'TodosTable',
     component: () => import('@/views/TodosTable.vue')
+  },
+  {
+    path: '/todos-form',
+    name: 'TodosForm',
+    component: () => import('@/views/TodosForm.vue')
   }
 ]
 
