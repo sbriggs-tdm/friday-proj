@@ -11,6 +11,11 @@ Vue.use(VueRouter)
     component: Home
   },
   {
+    path: '/desserts-form',
+    name: 'DessertsForm',
+    component: () => import('@/views/DessertsForm.vue')
+  },
+  {
     path: '/desserts-table',
     name: 'DessertsTable',
     component: () => import('@/views/DessertsTable.vue')
@@ -21,10 +26,10 @@ Vue.use(VueRouter)
     component: () => import('@/views/TodosTable.vue')
   },
   {
-    path: '/todos-form',
-    name: 'TodosForm',
-    component: () => import('@/views/TodosForm.vue')
-  }
+    path: '/responsiveness',
+    name: 'ResponsiveNess',
+    component: () => import('@/views/Responsiveness.vue')
+  },
 ]
 
 const router = new VueRouter({

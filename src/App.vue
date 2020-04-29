@@ -1,25 +1,27 @@
 <template>
+
   <v-app>
-    <v-app-bar app color="primary" dark >
+      <v-app-bar app color="primary" dark >
 
-      <v-tabs>
-        <v-tab v-for="link in links" :key="`${link.label}-header-link`" :to="link.url">
-          {{ link.label }}
-        </v-tab>
-      </v-tabs>
+        <v-tabs>
+          <v-tab v-for="link in links" :key="`${link.label}-header-link`" :to="link.url">
+            {{ link.label + " (" + link.hotKey + ")" }}
+          </v-tab>
+        </v-tabs>
 
-    </v-app-bar>
-    <v-content>
+      </v-app-bar>
+      <v-content>
 
-      <router-view></router-view>
-      <!-- <HelloWorld/> -->
+        <router-view></router-view>
+        <!-- <HelloWorld/> -->
 
-    </v-content>
-    <v-footer>
-      <v-spacer></v-spacer>
-      <div>&copy; {{ new Date().getFullYear() }}</div>
-    </v-footer>
+      </v-content>
+      <v-footer color="primary" dark>
+        <v-spacer></v-spacer>
+        <div>&copy; {{ new Date().getFullYear() }}</div>
+      </v-footer>
   </v-app>
+
 </template>
 
 <script>
@@ -31,26 +33,57 @@ export default {
   components: {
     /* HelloWorld, */
   },
-
   data: () => ({
     links: [
       {
         label: 'Home',
-        url: '/'
+        url: '/',
+        hotKey: "h"
       },
       {
-        label: 'Hard Coded Vuex',
-        url: '/desserts-table'
+        label: 'Desserts Form',
+        url: '/desserts-form',
+        hotKey: "s"
       },
       {
-        label: 'Axios Vuex',
-        url: '/todos-table'
+        label: 'Desserts Vuex',
+        url: '/desserts-table',
+        hotKey: "c"
       },
       {
-        label: 'Form',
-        url: '/todos-form'
-      }
+        label: 'Todos Vuex',
+        url: '/todos-table',
+        hotKey: "t"
+      },
+      {
+        label: 'Responsiveness',
+        url: '/responsiveness',
+        hotKey: "r"
+      },
     ]
   }),
+  methods: {
+
+  },
 };
+
+
+  
+
+/*   document.onkeydown = e => {
+        
+  if (e.altKey == true) {
+    console.log("Alt + :" + e.key);
+    console.log(e);
+    switch (e.key) {
+      case "1": document.querySelector("#home-tab").click();break;
+      case "2": document.querySelector("#shane-api-tab").click();break;
+      case "3": document.querySelector("#shane-language-api-tab").click();break;
+      case "4": document.querySelector("#form-tab").click();break;
+      case "5": document.querySelector("#data-tab").click();break;
+      case "6": document.querySelector("#help-page-tab").click();break;
+      default: break;
+    }
+  }
+}; */
 </script>

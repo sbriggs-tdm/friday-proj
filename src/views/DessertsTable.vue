@@ -1,11 +1,14 @@
 <template>
     <div>
+        <v-container>
+        <h1>Desserts</h1>
         <v-data-table
-            :headers="headers"
+            :headers="dessertHeaders"
             :items="allDesserts"
             :items-per-page="5"
             class="elevation-1">
         </v-data-table>
+        </v-container>
     </div>
 </template>
 
@@ -30,9 +33,7 @@ export default {
         ...mapGetters(
             [
                 'allDesserts', 
-                'headers',
-                'allTodos',
-                'todoHeaders',
+                'dessertHeaders',
             ]
         )
     },
